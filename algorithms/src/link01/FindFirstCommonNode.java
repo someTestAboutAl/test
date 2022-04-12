@@ -3,6 +3,10 @@ package link01;
 import java.util.Stack;
 
 /**
+ * 两个链表的第一个公共节点
+ * 循环遍历
+ * 栈
+ * 指针-比较，最多比较m+n次
  * description
  * Author: HP
  * Date: 2022/4/6

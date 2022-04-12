@@ -1,7 +1,12 @@
 package link01;
 
 import java.util.Stack;
+
 /**
+ * 反转链表
+ * 头插法
+ * 栈
+ * 递归
  * description
  * Author: HP
  * Date: 2022/4/7

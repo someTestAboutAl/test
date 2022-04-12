@@ -1,8 +1,8 @@
 package link01;
 
-import java.util.LinkedList;
-
 /**
+ * 删除倒数第n个节点
+ * 快慢指针
  * description
  * Author: HP
  * Date: 2022/3/10

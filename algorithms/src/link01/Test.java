@@ -1,22 +1,13 @@
 package link01;
 
 
-
-import java.applet.Applet;
-import java.io.Console;
-import java.io.InputStreamReader;
-import com.alibaba.fastjson.JSONObject;
-
-import java.util.*;
-import java.util.concurrent.Semaphore;
-
 /**
  * description
  * Author: HP
  * Date: 2022/3/4
  * Time: 14:42
  */
-public  class Test extends  Thread{
+public  class Test {
     public String str = "6";
     private int h = 9;
     private static final String s = "hiji";
@@ -36,49 +27,33 @@ public  class Test extends  Thread{
 //        x += 5;
 //    }
 
-    abstract class  p{
-
-      abstract    void test();
-
-    }
 
 
-    public  int step(int i){
+
+    public  static int step(int i){
         if(i < 3 && i > 0){
             return i;
         }
         return step(i-1)+step(i-2);
     }
-    public void run(){
-        try {
-            Thread.sleep(1000);
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
-        System.out.println("run");
-    }
-    public static void say(String s){
-        System.out.println("s");
-    }
-    public static void say(Object o){
-        System.out.println("o");
-    }
-    public static void testInteger(Integer integer){
-       integer = new Integer(5);
-    }
+
     public static void main(String[] args){
 
-        try{
-            System.out.println("try");
+        Test test = new Test(66);
+        String s;
+//        Test.step(1);
+//        try{
+//            System.out.println("try");
+//
+//            throw new Exception();
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            System.out.println("catch");
+//        }finally {
+//            System.out.println("finally");
+//        }
 
-            throw new Exception();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            System.out.println("catch");
-        }finally {
-            System.out.println("finally");
-        }
 //        String s = "aaa";
 //        s += 'a';
 //        say(s);
@@ -208,6 +183,10 @@ public  class Test extends  Thread{
 //        System.out.println(o.equals("Fred"));
 //        Test t2 = new Test();
     }
+
+    Test(int a ){
+        h = a;
+    }
     public void start(String str){
 //        for (int i = 0; i < 10; i++){
 //            System.out.println(i);
@@ -251,6 +230,11 @@ class A{
 
     static {
         System.out.println("静态语句块A");
+    }
+
+    public static void main(String[] args) {
+//        Test t = new Test();
+//        Test.step(1);
     }
 }
 

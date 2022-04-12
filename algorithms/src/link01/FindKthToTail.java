@@ -3,6 +3,9 @@ package link01;
 import java.util.Stack;
 
 /**
+ * 返回倒数第K的节点之后的链表
+ * 快慢指针
+ * 栈
  * description
  * Author: HP
  * Date: 2022/3/10
