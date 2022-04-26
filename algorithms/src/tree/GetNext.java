@@ -11,6 +11,8 @@ import java.util.List;
  * Time: 20:53
  */
 public class GetNext {
+
+
     public static void main(String[] args) {
         GetNext g = new GetNext();
         TreeNode n1 = new TreeNode(8);
@@ -32,12 +34,12 @@ public class GetNext {
         n5.setNext(n2);
         n6.setNext(n3);
         n7.setNext(n3);
-        System.out.println(g.getNext1(n2).getVal());
-        System.out.println(g.getNext1(n4).getVal());
-        System.out.println(g.getNext1(n5).getVal());
-        System.out.println(g.getNext2(n2).getVal());
-        System.out.println(g.getNext2(n4).getVal());
-        System.out.println(g.getNext2(n5).getVal());
+        System.out.println(g.getNext1(null));
+//        System.out.println(g.getNext1(n4));
+//        System.out.println(g.getNext1(n5));
+        System.out.println(g.getNext2(null));
+//        System.out.println(g.getNext2(n4).getVal());
+//        System.out.println(g.getNext2(n5).getVal());
 
     }
 
@@ -47,22 +49,25 @@ public class GetNext {
      * @param node
      * @return
      */
-    public TreeNode getNext1(TreeNode node){
+    public int getNext1(TreeNode node){
 
+        if (node == null){
+            return 0;
+        }
         TreeNode root = node;
         while (root.getNext() != null){
             root = root.getNext();
         }
-
-        List<TreeNode> list = inorder(root);
+        List<Integer> list = new ArrayList();
+        list = inorder(root,list);
 
         for (int i = 0; i < list.size(); i++){
-            if (list.get(i).getVal() == node.getVal()){
-                return  i == list.size()-1?null:list.get(i+1);
+            if (list.get(i) == node.getVal()){
+                return  i == list.size()-1?0:list.get(i+1);
             }
         }
 
-        return  null;
+        return  0;
     }
 
     /**
@@ -70,13 +75,15 @@ public class GetNext {
      * @param node
      * @return
      */
-    public List<TreeNode> inorder(TreeNode node){
-        List<TreeNode> list = new ArrayList();
+    public List<Integer> inorder(TreeNode node,List<Integer> list){
         if (node != null){
-            inorder(node.getLeft());
-            list.add(node);
-            inorder(node.getRight());
+            inorder(node.getLeft(),list);
+            list.add(node.getVal());
+            inorder(node.getRight(),list);
         }
+//        for (int i = 0; i < list.size(); i++){
+//            System.out.print("list： "+list+"， ");
+//            }
 
         return list;
     }
@@ -96,9 +103,7 @@ public class GetNext {
             return null;
         }
 
-        /**
-         * 情况1
-         */
+        //情况1
         if (node.getRight() != null){
             node = node.getRight();
             while (node.getLeft() != null){
