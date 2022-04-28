@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * 给定一个节点，给出中序遍历中的下一个节点
+ * 该节点包含指向左右子树以及父节点的指针
  * description
  * Author: HP
  * Date: 2022/4/24
@@ -55,12 +56,17 @@ public class GetNext {
             return 0;
         }
         TreeNode root = node;
+
+        //找到根节点
         while (root.getNext() != null){
             root = root.getNext();
         }
         List<Integer> list = new ArrayList();
+
+        //得到中序遍历的链表
         list = inorder(root,list);
 
+        //遍历链表，找到该节点的位置，返回下一个节点的值
         for (int i = 0; i < list.size(); i++){
             if (list.get(i) == node.getVal()){
                 return  i == list.size()-1?0:list.get(i+1);

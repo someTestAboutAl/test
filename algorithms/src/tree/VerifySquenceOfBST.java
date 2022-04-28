@@ -45,6 +45,7 @@ public class VerifySquenceOfBST {
     }
 
     /**
+     * 递归
      * 分别判断左子树、右子树、根
      * @param s
      * @return

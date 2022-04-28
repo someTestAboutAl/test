@@ -2,6 +2,7 @@ package tree;
 
 /**
  * 二叉搜索树的最近公共祖先
+ * 找到满足是p，q两个节点的公共祖先且深度尽可能大的节点值
  * 递归-时间：O(n),空间：O(n)
  * 遍历-时间：O(n),空间：O(n)
  * description
@@ -37,10 +38,11 @@ public class LowestCommonAncestor {
 
             return -1;
         }
+        //两个节点都小于当前节点，都在当前节点的左子树中
         if (p < root.getVal() && q < root.getVal()){
 
             return lowestCommonAncestor1(root.getLeft(),p,q);
-        }else if (p > root.getVal() && q > root.getVal()){
+        }else if (p > root.getVal() && q > root.getVal()){  //两个节点都大于当前节点，都在当前节点的右子树中
 
             return lowestCommonAncestor1(root.getRight(),p,q);
         }else{
