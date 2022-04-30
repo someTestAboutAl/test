@@ -22,12 +22,12 @@ public class LowestCommonAncestor {
         TreeNode n5 = new TreeNode(4);
         TreeNode n6 = new TreeNode(6);
         TreeNode n7 = new TreeNode(8);
-//        n1.setLeft(n2);
-//        n1.setRight(n3);
-//        n2.setLeft(n4);
-//        n2.setRight(n5);
-//        n3.setLeft(n6);
-//        n3.setRight(n7);
+        n1.setLeft(n2);
+        n1.setRight(n3);
+        n2.setLeft(n4);
+        n2.setRight(n5);
+        n3.setLeft(n6);
+        n3.setRight(n7);
         System.out.println(ancestor.lowestCommonAncestor2(n1,3,8));
 
     }
