@@ -50,6 +50,8 @@ public class TreeNode {
 
     @Override
     public String toString() {
+        PrintByRows p = new PrintByRows();
+        System.out.println(p.printByRows1(this));
         return "TreeNode{" +
                 "val=" + val +
                 ", left=" + left +
