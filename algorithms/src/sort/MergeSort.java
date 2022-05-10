@@ -60,8 +60,6 @@ public class MergeSort {
             a[left++] = temp[t++];
         }
 
-
-
     }
 
 }

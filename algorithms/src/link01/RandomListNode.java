@@ -11,6 +11,9 @@ public class RandomListNode {
     RandomListNode next = null;
     RandomListNode random = null;
 
+    public RandomListNode(int lable) {
+        this.lable = lable;
+    }
     public int getLable() {
         return lable;
     }
