@@ -36,6 +36,7 @@ public class MulArray {
         for (int i = 1; i < a.length; i++){
 
             res[i] = res[i-1] * a[i-1];
+
         }
 
         int temp = 1;

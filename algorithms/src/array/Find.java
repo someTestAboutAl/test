@@ -37,7 +37,7 @@ public class Find {
         int m = a.length;
         int n = a[0].length;
 
-        if (a == null || m == 0 || n == 0){
+        if (a == null || m == 0 ){
             return false;
         }
 
