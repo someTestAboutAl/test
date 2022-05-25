@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**将字母编码成数字（对应二十六个字母）
  * 11--->aa/k
  * 给定一串数字，返回有多少种翻译的结果
- * 0不能编译成任何结果
+ * 0不能编译成任何结果1
  * 要求：空间：O(n) 时间：O(n)
  * description
  * Author: mal
