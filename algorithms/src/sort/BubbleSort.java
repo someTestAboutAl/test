@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 交换排序-冒泡排序
  * 时间复杂度：O(n^2)
  * 空间复杂度：O(1)
- * 稳定
+ *   稳定
  * description
  * Author: HP
  * Date: 2022/3/22
