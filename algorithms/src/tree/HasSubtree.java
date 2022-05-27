@@ -85,7 +85,7 @@ public class HasSubtree {
             return false;
         }
 
-        return isSameTree(root1,root2)||hasSubtree1(root1.getLeft(),root2)||hasSubtree1(root1.getRight(),root2);
+        return isSameTree(root1,root2)||hasSubtree2(root1.getLeft(),root2)||hasSubtree2(root1.getRight(),root2);
     }
 
     /**
