@@ -28,7 +28,7 @@ public class Add {
 //
 //            add = (sum & add) << 1; // 产生进位 与运算
 //
-//            sum = temp;1
+//            sum = temp;
 //        }
 //
 //        return sum;
