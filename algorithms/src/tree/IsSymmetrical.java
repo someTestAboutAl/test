@@ -85,7 +85,7 @@ public class IsSymmetrical {
             q.add(right.getLeft());
         }
 
-        System.out.println(count);
+//        System.out.println(count);
         return true;
     }
 }
